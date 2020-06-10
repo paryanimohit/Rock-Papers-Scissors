@@ -52,7 +52,10 @@ header {
 .first{
 	display: block;
 	position: relative;
-	width:100%;
+	width:1000px;
+	top: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 	color: white;
 	border: 2px solid yellowgreen;
