@@ -54,7 +54,7 @@ header {
 	position: relative;
 	width:100%;
 	text-align: center;
-	color: white;
+	color: white; 
 }
 
 h1{
@@ -63,6 +63,44 @@ h1{
 
 p{
 	font-size: 25px;
+}
+
+table{
+	height:auto;
+	width:100%;
+}
+
+.game{
+	width: 80%;
+	height:400px;
+	margin: 20px auto 48px;
+	position: relative;
+}
+
+.r{
+	display: inline;
+	left: 0;
+	position: absolute;
+	height: 400px;
+	width:300px;
+}
+
+
+.p{
+	display: inline;
+	left: 350px;
+	position: absolute;
+	height: 400px;
+	width:300px;
+}
+
+
+.s{
+	display: inline;
+	left: 700px;
+	position: absolute;
+	height: 400px;
+	width:300px;
 }
 
 button{
