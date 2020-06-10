@@ -54,7 +54,8 @@ header {
 	position: relative;
 	width:100%;
 	text-align: center;
-	color: white; 
+	color: white;
+	border: 2px solid yellowgreen;
 }
 
 h1{
@@ -63,6 +64,7 @@ h1{
 
 p{
 	font-size: 25px;
+	line-height: 50px;
 }
 
 table{
@@ -103,12 +105,19 @@ table{
 	width:300px;
 }
 
+.container {
+	display: block; 
+  	position: relative; 
+ 	width:100%;
+}
+
 button{
     background-color:yellowgreen;
     border: 2px solid black;
     border-radius: 8px;
     font-size: 5mm;
-    height:70px;
+    height:100px;
+    width: 400px;
     text-align: center;
     cursor: pointer;
     color:black;
@@ -135,27 +144,6 @@ button:hover{
     cursor: pointer;
 }
 
-#button2{
-    background-color:yellowgreen;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 5mm;
-    height:70px;
-    text-align: center;
-    cursor: pointer;
-    display: none;
-}
-
-#button2:hover{
-    background-color: #f8f8f8;
-    font-size: 5mm;
-    box-shadow: 0.5px 0.5px 0.5px green;
-    border: 2px solid green;
-    border-radius: 8px;
-    height:70px;
-    text-align: center;
-    cursor: pointer;
-}
 
 
 body{
@@ -169,14 +157,6 @@ body{
     padding: 0;
 }
 
-.container {
-	display: block;
-	top: 50px; 
-  	position: relative; 
- 	width:100%;
- 	top: 50%;
-  	left: 50%;
-}
 
 
 footer{
