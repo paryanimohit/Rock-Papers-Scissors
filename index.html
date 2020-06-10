@@ -3,16 +3,26 @@
     <meta charset="utf-8">
     <title>Rock Papers Scissors</title>
     <link href="Styles/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
 </head>
 <body>
-	<header><a href="index.html"><img src="Images/logo.gif" alt="Rock Paper Scissor logo"></a>
-	<h1>Rock Paper Scissors</h1>
-	<a href="guide.html">How to Play?</a>
-	<a href="about.html">About ME</a>
-</header>
-    <button onClick="playRound('rock','rock')">Play a chance</button>
-    <button onCLick="playGame()">Play a round</button>
+	<header>
+	<div class="row">
+	<a class="left" href="#"><img src="Images/logo.gif" alt="Rock Paper Scissor logo" class="logo"></a>
+	<h1 class="left">Rock Paper Scissors</h1>
+	<a class="right" href="#">How to Play?</a>
+	<a class="right" href="#">About ME</a>
+	</div>
+	</header>
+	<main>
+	<div class="first">
+	<h1>How To Play?</h1>
+	<p>Rock paper scissors is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). To play this game, Click on <a href=#button>"Start a New Game"</a> Each Game has 5 rounds. i.e. you will have 5 chances to play with the computer. The player who wins maximum number of rounds wins the game. Best of Luck!</p>
+</div>
+	<div class="container">
+    	<button onClick="hide()">Start a New Game</button>
+   	 <button id="button2" onCLick="playGame()">Play a round</button>
+	</div><main>
     <script src="Scripts/main.js"></script>
 </body>
 </html>

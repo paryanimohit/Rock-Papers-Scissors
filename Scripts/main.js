@@ -44,3 +44,12 @@ function playGame(){
      }
 }
 
+function hide(){
+	let x= document.getElementById("button2");
+	if (x.style.display === "none") {
+  	  x.style.display = "block";
+ 	 } else {
+    	x.style.display = "block";
+ 	 }
+}
+

@@ -1,0 +1,151 @@
+header {
+	font-size: 15px;
+	background-color: #181818;
+	top:0px;
+	left: 0px;
+   	display: block;
+    	position: fixed;
+    	width: 100%;
+    	text-align: left;
+	color: yellowgreen;
+	border-bottom: 2px solid yellowgreen;
+}
+
+footer{
+    width: 100%; 
+    font-size: 14px;
+    bottom: 0px;
+    background-color: #130f0f;
+    position: fixed;
+    line-height: 40px;
+    border-top: 1px solid #050505; 
+    opacity: 60%;
+}
+
+a{
+	color: yellowgreen;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+.logo{
+	left: 20px;
+	position: relative;
+	width: 250px;
+	height: 150px;
+	border-radius:50%;
+	border: 1px solid yellowgreen;
+	
+}
+
+.row{
+    display:block;
+}
+
+.left{
+    float: inline-start;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-top: 30px;
+    text-decoration: none;
+    position: relative;
+    width: 300px;
+}
+
+.right{
+    float: inline-end;
+    white-space: nowrap;
+    padding-right: 10px;
+    text-decoration: none;
+    position: relative;
+    width: 100px;
+    padding-top: 10px;
+}
+
+button{
+    background-color:yellowgreen;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 5mm;
+    height:70px;
+    text-align: center;
+    cursor: pointer;
+    color:black;
+}
+
+button:hover{
+    background-color: #f8f8f8;
+    font-size: 5mm;
+    box-shadow: 0.5px 0.5px 0.5px green;
+    border: 2px solid green;
+    border-radius: 8px;
+    height:70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#button2{
+    background-color:yellowgreen;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 5mm;
+    height:70px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+#button2:hover{
+    background-color: #f8f8f8;
+    font-size: 5mm;
+    box-shadow: 0.5px 0.5px 0.5px green;
+    border: 2px solid green;
+    border-radius: 8px;
+    height:70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+body{
+    font-family: Butler, serif;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 980px;
+    position: relative;
+    background-color: #2f2f2f;
+    color:white;
+    padding: 0;
+}
+
+.container {
+	display: block;
+	top: 50px; 
+  	position: relative; 
+ 	width:100%;
+ 	top: 50%;
+  	left: 50%;
+}
+
+.first{
+	display: block;
+	top: 200px;
+	position: fixed;
+	width:100%;
+	text-align: center;
+	color: white;
+}
+
+h1{
+	font-size: 50px;
+}
+
+p{
+	font-size: 25px;
+}
+
