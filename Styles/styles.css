@@ -163,7 +163,9 @@ body{
     padding: 0;
 }
 
-
+.showHeading{
+	visibility: hidden;
+}
 
 footer{
     width: 100%; 

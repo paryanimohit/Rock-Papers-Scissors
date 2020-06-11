@@ -45,7 +45,7 @@ function playGame(){
 }
 
 function hide(){
-	var x= document.querySelectorAll("p s");
+	var x= document.querySelectorAll("");
 	console.log(x);
 	if (x[0].style.display === "none" && x[1].style.display==="None") {
   	  x[0].style.display = "block";
@@ -56,3 +56,12 @@ function hide(){
  	 }
 }
 
+function showHeading(){
+	var x=document.querySelector(".btn");
+	x.value = "Reset";
+	x.innerHTML="Reset";
+}
+
+function startGame(){
+	playgame();
+}
