@@ -45,11 +45,14 @@ function playGame(){
 }
 
 function hide(){
-	let x= document.getElementById("button2");
-	if (x.style.display === "none") {
-  	  x.style.display = "block";
+	var x= document.querySelectorAll("p s");
+	console.log(x);
+	if (x[0].style.display === "none" && x[1].style.display==="None") {
+  	  x[0].style.display = "block";
+	  x[1].style.display = "block";
  	 } else {
-    	x.style.display = "block";
+    	x[0].style.display = "block";
+	x[1].style.display = "block";
  	 }
 }
 

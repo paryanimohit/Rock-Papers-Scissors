@@ -76,15 +76,18 @@ table{
 }
 
 .game{
-	width: 900px;
-	height:400px;
+	width: 1000px;
+	height:500px;
+	top: 20px;
+	border: 2px solid yellowgreen;
 	margin: 20px auto 48px;
 	position: relative;
 }
 
 .r{
 	display: inline;
-	left: 0;
+	left: 10px;
+	top: 10px;
 	position: absolute;
 	height: 400px;
 	width:300px;
@@ -142,7 +145,7 @@ button:hover{
     box-shadow: 0.5px 0.5px 0.5px green;
     border: 2px solid green;
     border-radius: 8px;
-    height:70px;
+    height:100px;
     text-align: center;
     cursor: pointer;
 }
