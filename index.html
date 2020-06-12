@@ -22,14 +22,14 @@
 <table>
 		<tr>
 		<div class="game">
-		<img src="Images/rock.png"alt="Rock"class="r">
-		<img src="Images/paper.png"alt="paper"class="p">
-		<img src="Images/scissor.png"alt="scissor"class="s">
+		<img src="Images/rock.png"alt="Rock"class="r" onClick="hide('Paper','Scissor')" style="visibility: visible;">
+		<img src="Images/paper.png"alt="paper"class="p" OnClick="hide('Rock','Scissor')" style="visibility: visible;">
+	    <img src="Images/scissor.png"alt="scissor"class="s" onClick="hide('Rock','Paper')"style="visibility: visible;">		
+		</div>
 		</tr>
 	</table>
-	</div>
 	<div class="container"><center>
-	<h3 class="showHeading">Select your choice</h3>
+	<h3 class="showHeading" style="visibility: hidden;">Select Rock, Paper or Scissor</h3>
     	<button class="btn" onClick="showHeading()">Start a New Game</button>
 	</center></div>
     <script src="Scripts/main.js"></script>

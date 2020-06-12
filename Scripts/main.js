@@ -44,22 +44,62 @@ function playGame(){
      }
 }
 
-function hide(){
-	var x= document.querySelectorAll("");
-	console.log(x);
-	if (x[0].style.display === "none" && x[1].style.display==="None") {
-  	  x[0].style.display = "block";
-	  x[1].style.display = "block";
- 	 } else {
-    	x[0].style.display = "block";
-	x[1].style.display = "block";
- 	 }
+function hide(element1,element2){
+	if(element1 == "Paper"&& element2=="Scissor"){
+	var x = document.querySelector(".p");
+	var y = document.querySelector(".s");
+		if(x.style.visibility == "visible"){
+			x.style.visibility = "hidden";	
+		}
+		else{x.style.visibility="hidden"}
+		
+		if(y.style.visibility == "visible"){
+			y.style.visibility = "hidden";	
+		}
+		else{y.style.visibility="hidden"}
+	}
+	if(element1 == "Rock"&& element2=="Scissor"){
+	var x = document.querySelector(".r");
+	var y = document.querySelector(".s");
+		if(x.style.visibility == "visible"){
+			x.style.visibility = "hidden";	
+		}
+		else{x.style.visibility="hidden"}
+		
+		if(y.style.visibility == "visible"){
+			y.style.visibility = "hidden";	
+		}
+		else{y.style.visibility="hidden"}
+	}
+	if(element1 == "Rock"&& element2=="Paper"){
+	var x = document.querySelector(".r");
+	var y = document.querySelector(".p");
+		if(x.style.visibility == "visible"){
+			x.style.visibility = "hidden";	
+		}
+		else{x.style.visibility="hidden"}
+		
+		if(y.style.visibility == "visible"){
+			y.style.visibility = "hidden";	
+		}
+		else{y.style.visibility="hidden"}
+	}
+	
+			
 }
 
 function showHeading(){
-	var x=document.querySelector(".btn");
-	x.value = "Reset";
-	x.innerHTML="Reset";
+	var y=document.querySelector(".showHeading");
+	if(y.style.visibility == "hidden"){
+		y.style.visibility="visible";
+		var x=document.querySelector(".btn");
+		if(x.innerHTML == "Start a New Game"){	
+		x.innerHTML="Reset";}
+		else{
+		x.innerHTML="Start a New Game"}}
+	else{
+		y.style.visibility="visible";
+	}
 }
 
 function startGame(){
