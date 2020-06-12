@@ -59,6 +59,7 @@ header {
 	text-align: center;
 	color: white;
 	border: 2px solid yellowgreen;
+	background-color:#181818;
 }
 
 h1{
@@ -82,6 +83,7 @@ table{
 	border: 2px solid yellowgreen;
 	margin: 20px auto 48px;
 	position: relative;
+	background-color: #181818;
 }
 
 .r{
@@ -145,7 +147,7 @@ a:hover{
 button:hover{
     background-color: #f8f8f8;
     font-size: 5mm;
-    box-shadow: 0.5px 0.5px 0.5px green;
+    box-shadow: 1px 1px 1px green;
     border: 2px solid green;
     border-radius: 8px;
     height:100px;

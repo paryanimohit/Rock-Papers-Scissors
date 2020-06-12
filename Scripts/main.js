@@ -92,14 +92,32 @@ function showHeading(){
 	var y=document.querySelector(".showHeading");
 	if(y.style.visibility == "hidden"){
 		y.style.visibility="visible";
-		var x=document.querySelector(".btn");
-		if(x.innerHTML == "Start a New Game"){	
-		x.innerHTML="Reset";}
-		else{
-		x.innerHTML="Start a New Game"}}
+		var x=document.getElementsByClassName("btn");
+		if(x[0].innerHTML == "Start a New Game"){
+		x[0].innerHTML="Reset";
+		var z=document.querySelector(".btn");
+		if(z.innerHTML =="reset")
+			{ z.onClick("reset()");}
+		}
+	}
 	else{
 		y.style.visibility="visible";
 	}
+}
+
+function reset(){
+		var x = document.querySelector(".r");
+		var y = document.querySelector(".s");
+		var z = document.querySelector(".p");
+		if(x.style.visibility == "hidden"){
+		x.style.visibility = "visible";
+		}
+		if(y.style.visibility == "hidden"){
+		y.style.visibility = "visible";
+		}
+		if(z.style.visibility == "hidden"){
+		z.style.visibility = "visible";
+		}
 }
 
 function startGame(){
