@@ -27,14 +27,14 @@ function playRound(player){
 	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
 	y.innerHTML="Oi! No one won this round"
       }
-     else if((playerSelection === "ROCK" && computerSelection === "SCISSORS") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "SCISSOR" && computerSelection === "PAPER")){
+     else if((playerSelection === "ROCK" && computerSelection === "SCISSOR") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "SCISSOR" && computerSelection === "PAPER")){
 	playerScore+=1;
            var x = document.getElementById("scores");
 	var y = document.getElementById("result");
 	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
 	y.innerHTML = "Hurrah! You won this round";
 	}
-     else if((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "SCISSOR")){
+     else if((playerSelection === "SCISSOR" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "SCISSOR")){
 		computerScore+=1;
 		 var x = document.getElementById("scores");
 	         var y = document.getElementById("result");
@@ -42,7 +42,8 @@ function playRound(player){
 	y.innerHTML="Oops! Computer won this round";
 	}
      else{
-	console.log("Please Enter a valid response and Try again");
+	var y = document.getElementById("result");
+	y.innerHTML="Oops that's our bad. Please reload the page";
 	}
 
 }
