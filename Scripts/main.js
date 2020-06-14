@@ -121,6 +121,7 @@ function showLinks(){
 		}
 }
 
-function startGame(){
-	playgame();
+function changedClass(){
+	document.querySelector('.p').className = "r";
+	document.querySelector('.s').className = "r"; 
 }
