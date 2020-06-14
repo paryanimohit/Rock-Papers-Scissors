@@ -17,20 +17,23 @@
 	<main>
 	<div class="first">
 	<h1>How To Play?</h1><center>
-	<p>Rock paper scissors is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). To play this game, Click on <a href=#button>"Start a New Game"</a> Each Game has 5 rounds. i.e. you will have 5 chances to play with the computer. The player who wins maximum number of rounds wins the game. Best of Luck!</p>
+	<p>Rock paper scissors is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). To play this game, Click on <a href="#btn">Start a New Game</a> Each Game has 5 rounds. i.e. you will have 5 chances to play with the computer. The player who wins maximum number of rounds wins the game. Best of Luck!</p>
 </div>
 <table>
-		<tr>
+		<tr style="height: auto;">
 		<div class="game">
 		<img src="Images/rock.png"alt="Rock"class="r" onClick="hide('Paper','Scissor')" style="visibility: visible;">
 		<img src="Images/paper.png"alt="paper"class="p" OnClick="hide('Rock','Scissor')" style="visibility: visible;">
-	    <img src="Images/scissor.png"alt="scissor"class="s" onClick="hide('Rock','Paper')"style="visibility: visible;">		
+	    <img src="Images/scissor.png"alt="scissor"class="s" onClick="hide('Rock','Paper')"style="visibility: visible;">
+		<h4 style="visibility: hidden;" class="abc">Score:</h4>
+		<h2 style="visibility: hidden;" class="abc">Yay...You Win!</h2>	
+		<a href="index.html"><h3 style="visibility: hidden;" class="abc">Retry?</h3></a>	
 		</div>
 		</tr>
-	</table>
+</table>
 	<div class="container"><center>
-	<h3 class="showHeading" style="visibility: hidden;">Select Rock, Paper or Scissor</h3>
-    	<button class="btn" onClick="showHeading()">Start a New Game</button>
+	<h2 class="showHeading" style="visibility: hidden;">Select Rock, Paper or Scissor</h3>
+    	<button id="btn" class="btn" onClick="showHeading()" style="visibility: visible;">Start a New Game</button>
 	</center></div>
     <script src="Scripts/main.js"></script>
 </body>

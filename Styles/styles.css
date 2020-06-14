@@ -89,7 +89,7 @@ table{
 .r{
 	display: inline;
 	left: 10px;
-	top: 10px;
+	top: 50px;
 	position: absolute;
 	height: 400px;
 	width:300px;
@@ -100,6 +100,7 @@ table{
 .p{
 	display: inline;
 	left: 350px;
+	top: 40px;
 	position: absolute;
 	height: 400px;
 	width:300px;	
@@ -110,6 +111,7 @@ table{
 .s{
 	display: inline;
 	left: 700px;
+	top: 30px;
 	position: absolute;
 	height: 400px;
 	width:300px;
@@ -166,11 +168,19 @@ body{
     background-color: #2f2f2f;
     color:white;
     padding: 0;
+    font-size: 25px;
 }
 
 .showHeading{
 	
 	color: yellowgreen;
+}
+
+.abc{
+	position: relative;
+	top: 120px;
+	left: 360px;
+	width: 300px;
 }
 
 footer{

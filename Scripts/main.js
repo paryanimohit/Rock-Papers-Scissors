@@ -49,12 +49,14 @@ function hide(element1,element2){
 	var x = document.querySelector(".p");
 	var y = document.querySelector(".s");
 		if(x.style.visibility == "visible"){
-			x.style.visibility = "hidden";	
+			x.style.visibility = "hidden";
+			showLinks();	
 		}
 		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
 			y.style.visibility = "hidden";	
+			showLinks();
 		}
 		else{y.style.visibility="hidden"}
 	}
@@ -63,11 +65,13 @@ function hide(element1,element2){
 	var y = document.querySelector(".s");
 		if(x.style.visibility == "visible"){
 			x.style.visibility = "hidden";	
+			showLinks();
 		}
 		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
-			y.style.visibility = "hidden";	
+			y.style.visibility = "hidden";
+			showLinks();	
 		}
 		else{y.style.visibility="hidden"}
 	}
@@ -75,12 +79,14 @@ function hide(element1,element2){
 	var x = document.querySelector(".r");
 	var y = document.querySelector(".p");
 		if(x.style.visibility == "visible"){
-			x.style.visibility = "hidden";	
+			x.style.visibility = "hidden";
+			showLinks();	
 		}
 		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
-			y.style.visibility = "hidden";	
+			y.style.visibility = "hidden";
+			showLinks();	
 		}
 		else{y.style.visibility="hidden"}
 	}
@@ -92,31 +98,23 @@ function showHeading(){
 	var y=document.querySelector(".showHeading");
 	if(y.style.visibility == "hidden"){
 		y.style.visibility="visible";
-		var x=document.getElementsByClassName("btn");
-		if(x[0].innerHTML == "Start a New Game"){
-		x[0].innerHTML="Reset";
-		var z=document.querySelector(".btn");
-		if(z.innerHTML =="reset")
-			{ z.onClick("reset()");}
-		}
+		document.querySelector(".btn").style.visibility="hidden";
 	}
 	else{
 		y.style.visibility="visible";
 	}
 }
 
-function reset(){
-		var x = document.querySelector(".r");
-		var y = document.querySelector(".s");
-		var z = document.querySelector(".p");
-		if(x.style.visibility == "hidden"){
-		x.style.visibility = "visible";
+function showLinks(){
+	var x = document.querySelectorAll(".abc");
+	if(x[0].style.visibility=="hidden"){
+		x[0].style.visibility = "visible";
 		}
-		if(y.style.visibility == "hidden"){
-		y.style.visibility = "visible";
+	if(x[1].style.visibility=="hidden"){
+		x[1].style.visibility = "visible";
 		}
-		if(z.style.visibility == "hidden"){
-		z.style.visibility = "visible";
+	if(x[2].style.visibility=="hidden"){
+		x[2].style.visibility = "visible";
 		}
 }
 
