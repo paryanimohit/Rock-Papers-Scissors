@@ -1,4 +1,5 @@
-
+var computerScore = 0;
+var playerScore = 0; 
 function computerPlay(){
 
     let computerSelection = Math.floor(Math.random() * 2);
@@ -20,80 +21,76 @@ function playRound(player){
      let computer = computerPlay();
      let playerSelection = player.toUpperCase();
      let computerSelection = computer.toUpperCase();
-	console.log(playerSelection,computerSelection)
-     if(playerSelection == computerSelection){
-	 console.log("Equal");
-         return "Oops! You both played "+playerSelection; 
+     if(playerSelection === computerSelection){
+	 var x = document.getElementById("scores");
+	var y = document.getElementById("result");
+	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
+	y.innerHTML="Oi! No one won this round"
       }
-     if((playerSelection === "ROCK" && computerSelection === "SCISSORS") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "SCISSOR" && computerSelection === "PAPER")){
-          
-	console.log("You Won")
-	 return "Hurrah! You won! "+playerSelection+" beats "+computerSelection;
-      }
-     if((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "SCISSOR")){
-	  console.log("Lost")
-          return "Oops! You Lose! "+computerSelection+" beats "+playerSelection;
-      }
+     else if((playerSelection === "ROCK" && computerSelection === "SCISSORS") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "SCISSOR" && computerSelection === "PAPER")){
+	playerScore+=1;
+           var x = document.getElementById("scores");
+	var y = document.getElementById("result");
+	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
+	y.innerHTML = "Hurrah! You won this round";
+	}
+     else if((playerSelection === "SCISSORS" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "SCISSOR")){
+		computerScore+=1;
+		 var x = document.getElementById("scores");
+	         var y = document.getElementById("result");
+	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
+	y.innerHTML="Oops! Computer won this round";
+	}
      else{
 	console.log("Please Enter a valid response and Try again");
 	}
 
 }
 
-function playGame(element1){
-       playRound(element1);
-}
-
 function hide(element1,element2,element3){
-	if(element1 == "Paper"&& element2=="Scissor"){
+	if(element1 === "Paper"&& element2==="Scissor"){
 	var x = document.querySelector(".p");
 	var y = document.querySelector(".s");
 		if(x.style.visibility == "visible"){
 			x.style.visibility = "hidden";
-			showComputerChoice();	
 		}
-		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
-			y.style.visibility = "hidden";	
-			showComputerChoice();
+			y.style.visibility = "hidden";
+			
 		}
-		else{y.style.visibility="hidden"}
-	playGame(element3);
+	playRound(element3);	
+	showLinks();
 	}
-	if(element1 == "Rock"&& element2=="Scissor"){
+	else if(element1 === "Rock"&& element2==="Scissor"){
 	var x = document.querySelector(".r");
 	var y = document.querySelector(".s");
 		if(x.style.visibility == "visible"){
 			x.style.visibility = "hidden";	
-			showComputerChoice();
+			
 		}
-		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
 			y.style.visibility = "hidden";
-			showComputerChoice();	
+	
 		}
-		else{y.style.visibility="hidden"}
-	playGame(element3);
+	playRound(element3);
+	showLinks();
+		
 	}
-	if(element1 == "Rock"&& element2=="Paper"){
+	else if(element1 === "Rock"&& element2==="Paper"){
 	var x = document.querySelector(".r");
 	var y = document.querySelector(".p");
 		if(x.style.visibility == "visible"){
-			x.style.visibility = "hidden";
-			showComputerChoice();	
+			x.style.visibility = "hidden";	
 		}
-		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
-			y.style.visibility = "hidden";
-			showComputerChoice();	
-			
+			y.style.visibility = "hidden";		
 		}
-		else{y.style.visibility="hidden"}
-	playGame(element3);
-	}	
+	playRound(element3);
+	showLinks();
+	}
 }
 
 function showHeading(){
@@ -107,7 +104,7 @@ function showHeading(){
 	}
 }
 
-function showComputerChoice(){
+function showLinks(){
 	var x = document.querySelectorAll(".abc");
 	if(x[0].style.visibility=="hidden"){
 		x[0].style.visibility = "visible";
@@ -144,4 +141,9 @@ function showScissor(){
 function changedClass(){
 	document.querySelector('.p').className = "r";
 	document.querySelector('.s').className = "r"; 
+}
+
+function unBlur(){
+	var x = document.querySelector(".game");
+	if(x.style.filter=="blur(8px)");{ x.style.filter = "blur(0px)";}
 }

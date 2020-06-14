@@ -84,6 +84,7 @@ table{
 	margin: 20px auto 48px;
 	position: relative;
 	background-color: #181818;
+	filter: blur(8px);
 }
 
 .r{
@@ -120,7 +121,8 @@ table{
 
 .container {
 	display: block; 
-  	position: relative; 
+  	position: relative;
+	top: -50px; 
  	width:100%;
 }
 
