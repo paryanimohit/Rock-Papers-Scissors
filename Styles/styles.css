@@ -104,7 +104,7 @@ table{
 	position: absolute;
 	height: 400px;
 	width:300px;	
-	cursor: pointer
+	cursor: pointer;
 }
 
 
@@ -115,7 +115,7 @@ table{
 	position: absolute;
 	height: 400px;
 	width:300px;
-	cursor: pointer
+	cursor: pointer;
 }
 
 .container {

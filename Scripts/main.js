@@ -1,24 +1,25 @@
-let myGame = document.getElementById("myButton1");
-let myGame1 = document.getElementById("myButton2");
 
 function computerPlay(){
 
     let computerSelection = Math.floor(Math.random() * 2);
     if(computerSelection == 0){
+	showRock();
          return "Rock";
       }  
     if(computerSelection == 1){
+	showPaper();
          return "Paper";
       }
     if(computerSelection == 2){
+	showScissor();
          return "Scissor";
       }
  }
 
-function playRound(player,computerSelection){
+function playRound(player){
      let computer = computerPlay();
      let playerSelection = player.toUpperCase();
-     computerSelection = computer.toUpperCase();
+     let computerSelection = computer.toUpperCase();
 	console.log(playerSelection,computerSelection)
      if(playerSelection == computerSelection){
 	 console.log("Equal");
@@ -40,9 +41,7 @@ function playRound(player,computerSelection){
 }
 
 function playGame(element1){
-    for(i=0;i<5;i++){
-       playRound(element1,'rock');
-     }
+       playRound(element1);
 }
 
 function hide(element1,element2,element3){
@@ -51,13 +50,13 @@ function hide(element1,element2,element3){
 	var y = document.querySelector(".s");
 		if(x.style.visibility == "visible"){
 			x.style.visibility = "hidden";
-			showLinks();	
+			showComputerChoice();	
 		}
 		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
 			y.style.visibility = "hidden";	
-			showLinks();
+			showComputerChoice();
 		}
 		else{y.style.visibility="hidden"}
 	playGame(element3);
@@ -67,13 +66,13 @@ function hide(element1,element2,element3){
 	var y = document.querySelector(".s");
 		if(x.style.visibility == "visible"){
 			x.style.visibility = "hidden";	
-			showLinks();
+			showComputerChoice();
 		}
 		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
 			y.style.visibility = "hidden";
-			showLinks();	
+			showComputerChoice();	
 		}
 		else{y.style.visibility="hidden"}
 	playGame(element3);
@@ -83,13 +82,13 @@ function hide(element1,element2,element3){
 	var y = document.querySelector(".p");
 		if(x.style.visibility == "visible"){
 			x.style.visibility = "hidden";
-			showLinks();	
+			showComputerChoice();	
 		}
 		else{x.style.visibility="hidden"}
 		
 		if(y.style.visibility == "visible"){
 			y.style.visibility = "hidden";
-			showLinks();	
+			showComputerChoice();	
 			
 		}
 		else{y.style.visibility="hidden"}
@@ -108,7 +107,7 @@ function showHeading(){
 	}
 }
 
-function showLinks(){
+function showComputerChoice(){
 	var x = document.querySelectorAll(".abc");
 	if(x[0].style.visibility=="hidden"){
 		x[0].style.visibility = "visible";
@@ -119,6 +118,27 @@ function showLinks(){
 	if(x[2].style.visibility=="hidden"){
 		x[2].style.visibility = "visible";
 		}
+}
+
+function showRock(){
+	var y = document.getElementById("rockC");
+	if(y.style.visibility == "hidden"){
+		y.style.visibility = "visible";
+	}
+}
+
+function showPaper(){
+	var y = document.getElementById("paperC");
+	if(y.style.visibility == "hidden"){
+		y.style.visibility ="visible";
+	}
+}
+
+function showScissor(){
+	var y = document.getElementById("scissorC");
+	if(y.style.visibility=="hidden"){
+		y.style.visibility = "visible";
+	}
 }
 
 function changedClass(){
