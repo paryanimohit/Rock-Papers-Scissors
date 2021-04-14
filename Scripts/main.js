@@ -1,8 +1,9 @@
 var computerScore = 0;
 var playerScore = 0; 
+
 function computerPlay(){
 
-    let computerSelection = Math.floor(Math.random() * 2);
+    var computerSelection = Math.floor(Math.random() * 2);
     if(computerSelection == 0){
 	showRock();
          return "Rock";
@@ -18,14 +19,16 @@ function computerPlay(){
  }
 
 function playRound(player){
-     let computer = computerPlay();
-     let playerSelection = player.toUpperCase();
-     let computerSelection = computer.toUpperCase();
-     if(playerSelection === computerSelection){
-	 var x = document.getElementById("scores");
-	var y = document.getElementById("result");
-	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
-	y.innerHTML="Oi! No one won this round"
+     var computer = computerPlay();
+
+     var playerSelection = player.toUpperCase();
+     var computerSelection = computer.toUpperCase();
+     
+	 if(playerSelection === computerSelection){
+		var x = document.getElementById("scores");
+		var y = document.getElementById("result");
+		x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
+		y.innerHTML="It's a Draw! Looks like no one wants to win the Game..."
       }
      else if((playerSelection === "ROCK" && computerSelection === "SCISSOR") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "SCISSOR" && computerSelection === "PAPER")){
 	playerScore+=1;
