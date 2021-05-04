@@ -9,36 +9,38 @@
 	<header>
 			<a class="left" href="index.html"><img src="Images/logo.gif" alt="Rock Paper Scissor logo" class="logo"></a>
 			<h1 class="center">Rock Paper Scissors</h1>
-			<a class="right" href="#htp">How to Play?</a>
+			<a class="right" href="focusHTP()">How to Play?</a>
 	</header>
 
 	<main>
 		<div class="first" id="htp">
-			<h1>How To Play?</h1><center>
+			<h1>How To Play?</h1>
 			<p>Rock paper scissors is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). To play this game, Click on <a href="#btn">Start a New Game.</a></p>
 		</div>
+<div id = 'game'>		
 <table>
-		<tr style="height: auto;">
-		<div class="game" id="game">
+		<tr">
 		<img id="rock"src="Images/rock.png"alt="Rock"class="r" onClick="hide('Paper','Scissor','rock'); this.onclick=null;" style="visibility: visible;">
 		<img id="paper"src="Images/paper.png"alt="paper"class="p" OnClick="hide('Rock','Scissor','paper'); changedClass(); this.onclick=null;" style="visibility: visible;">
 	    <img id="scissor"src="Images/scissor.png"alt="scissor"class="s" onClick="hide('Rock','Paper','Scissor'); changedClass(); this.onclick=null;"style="visibility: visible;">
 
-		<img id="rockC"src="Images/rock.png"alt="Rock"class="s" style="visibility: hidden;">
+		<!-- <img id="rockC"src="Images/rock.png"alt="Rock"class="s" style="visibility: hidden;">
 		<img id="paperC"src="Images/paper.png"alt="paper"class="s" style="visibility: hidden;">
-	    	<img id="scissorC"src="Images/scissor.png"alt="scissor"class="s"style="visibility: hidden;">
+	    <img id="scissorC"src="Images/scissor.png"alt="scissor"class="s"style="visibility: hidden;"> -->
 
-
-		<h4 style="visibility: hidden;" class="abc" id= "scores"></h4>
+		<!-- <h4 style="visibility: hidden;" class="abc" id= "scores"></h4>
 		<h3 style="visibility: hidden;" class="abc"id="result"></h2>	
-		<a href="index.html"><h3 style="visibility: hidden;" class="abc">Retry?</h3></a>	
-		</div>
+		<a href="index.html"><h3 style="visibility: hidden;" class="abc">Retry?</h3></a>	 -->
 		</tr>
+		<tr>
+			<button id="btn" class="btn"<button id="btn" class="btn" onClick="showHeading(); unBlur();" style="visibility: visible;">Start a New Game</button>
+		</tr>	
 </table>
-	<div class="container"><center>
+	<!-- <div class="container"><center>
 	<h2 class="showHeading" style="visibility: hidden;">Select Rock, Paper or Scissor</h3>
     	<button id="btn" class="btn" onClick="showHeading(); unBlur();" style="visibility: visible;">Start a New Game</button>
 	</center></div>
+	</div> -->
     <script src="Scripts/main.js"></script>
 </body>
 </html>

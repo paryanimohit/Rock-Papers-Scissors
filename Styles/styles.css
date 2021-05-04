@@ -6,7 +6,7 @@ body{
     position: relative;
     background-color: #2f2f2f;
     color:white;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 header {
@@ -16,10 +16,10 @@ header {
 	background-color: #181818;
 	float: left;
     width: 100%;
+	height: 140px;
     text-align: left;
 	color: yellowgreen;
 	border-bottom: 2px solid yellowgreen;
-	/* height: 10%; */
 }
 
 .logo{
@@ -51,7 +51,7 @@ header {
 
 .right{
 	float: right;
-    white-space: nowrap;
+	white-space: nowrap;
     text-decoration: none;
     position: relative;
     width: 20%;
@@ -62,19 +62,18 @@ header {
 
 main{
     font-family: Butler, serif;
-    display: inline-block;
+    display: block;
     width:100%;
+	padding-top: 150px;
     position: relative;
     color:white;
 }
 
 .first{
 	display: block;
+	float: left;
 	position: relative;
-	width:1000px;
-	top: 10px;
-	margin-left: auto;
-	margin-right: auto;
+	width:500px;
 	text-align: center;
 	color: white;
 	border: 2px solid yellowgreen;
@@ -82,17 +81,23 @@ main{
 }
 
 h1{
-	font-size: 50px;
+	font-size: 30px;
 }
 
 p{
-	font-size: 25px;
+	font-size: 22px;
 	line-height: 50px;
+}
+
+#game{
+	display: block;
+	width:53%;
+	float: right;
 }
 
 table{
 	height:auto;
-	width:100%;
+	width:50%;
 }
 
 .game{
@@ -108,40 +113,40 @@ table{
 
 .r{
 	display: inline;
-	left: 10px;
-	top: 50px;
-	position: absolute;
-	height: 400px;
-	width:300px;
+	/* left: 10px; */
+	/* top: 50px; */
+	/* position: absolute; */
+	height: 250px;
+	width:200px;
 	cursor: pointer
 }
 
 .p{
 	display: inline;
-	left: 350px;
-	top: 40px;
-	position: absolute;
-	height: 400px;
-	width:300px;	
+	/* left: 350px; */
+	/* top: 40px; */
+	/* position: absolute; */
+	height: 250px;
+	width:180px;	
 	cursor: pointer;
 }
 
 
 .s{
 	display: inline;
-	left: 700px;
-	top: 30px;
-	position: absolute;
-	height: 400px;
-	width:300px;
+	/* left: 700px; */
+	/* top: 30px; */
+	/* position: absolute; */
+	height: 300px;
+	width:180px;
 	cursor: pointer;
 }
 
 .container {
 	display: block; 
   	position: relative;
-	top: -50px; 
- 	width:100%;
+	/* top: -50px;  */
+ 	width:53%;
 }
 
 button{
@@ -149,8 +154,8 @@ button{
     border: 2px solid black;
     border-radius: 8px;
     font-size: 5mm;
-    height:100px;
-    width: 400px;
+    height:80px;
+    width: 40%;
     text-align: center;
     cursor: pointer;
     color:black;
@@ -172,7 +177,7 @@ button:hover{
     box-shadow: 1px 1px 1px green;
     border: 2px solid green;
     border-radius: 8px;
-    height:100px;
+    height:80px;
     text-align: center;
     cursor: pointer;
 }
@@ -185,12 +190,12 @@ button:hover{
 
 .abc{
 	position: relative;
-	top: 120px;
-	left: 360px;
-	width: 300px;
+	/* top: 120px; */
+	/* left: 360px; */
+	/* width: 300px; */
 }
 
-footer{
+/* footer{
     width: 100%; 
     font-size: 14px;
     bottom: 0px;
@@ -200,5 +205,5 @@ footer{
     border-top: 1px solid #050505; 
     opacity: 60%;
 }
-
+ */
 
