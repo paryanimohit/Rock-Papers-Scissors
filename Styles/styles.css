@@ -1,131 +1,206 @@
 body{
     font-family: Butler, serif;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    background-color: #2f2f2f;
-    color:white;
+    display: flex;
+	flex-flow: column wrap;
+	overflow-x:hidden;
+    background-color: #1a1a1d;
     font-size: 20px;
 }
 
-header {
-	position: fixed;
-	display: block;
-	font-size: 15px;
-	background-color: #181818;
-	float: left;
-    width: 100%;
-	height: 140px;
-    text-align: left;
-	color: yellowgreen;
-	border-bottom: 2px solid yellowgreen;
-}
-
 .logo{
-	width: 150px;
-	height: 100px;
+	width: 60%;
+	height: 100%;
 	border-radius:50%;
-	border: 2px solid black;	
-}
-
-.left{
-	float: left;
-    white-space: nowrap;
-    text-decoration: none;
-    position: relative;
-	width: 20%;
-	text-align: center;
-	padding-top: 8px;
-}
-
-.center{
-	display: inline-block;
-    white-space: nowrap;
-    text-decoration: none;
-    position: relative;
-    width: 50%;
-	text-align: left;
-	font-size: 50px;
-}
-
-.right{
-	float: right;
-	white-space: nowrap;
-    text-decoration: none;
-    position: relative;
-    width: 20%;
-	padding-top: 12px;
-	padding-right: 10px;
-	text-align: right;
-}
-
-main{
-    font-family: Butler, serif;
-    display: block;
-    width:100%;
-	padding-top: 150px;
-    position: relative;
-    color:white;
-}
-
-.first{
-	display: block;
-	float: left;
-	position: relative;
-	width:500px;
-	text-align: center;
-	color: white;
-	border: 2px solid yellowgreen;
-	background-color:#181818;
 }
 
 h1{
-	font-size: 30px;
+	width: 100%;
+	font-size: 80% !important;
 }
 
-p{
-	font-size: 22px;
-	line-height: 50px;
+header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Zen Dots', cursive;
+	color: #C3073F;
+	background-color: #1a1a1d;
+	width: 100%;
+	height: 610px;  
+	/* Change height to responsive screen size */
+	z-index: 1;
 }
 
-#game{
-	display: block;
-	width:53%;
-	float: right;
+@media only screen and (min-width: 700px) {
+	header{
+		font-size: 64px;
+	}
+	.flip-card-back{
+		font-size: 35px;
+		line-height: 80px;
+	}	
+	.game-element{
+		height: 100%;
+		width:100%;
+		cursor: pointer
+	}
 }
 
-table{
-	height:auto;
-	width:50%;
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+	header{
+		font-size: 30px;
+	}
 }
+
+@media only screen and (max-width: 600px) {
+	header{
+		font-size: 45px;
+	}
+
+	.flip-card-back{
+		font-size: 20px;
+		line-height: 50px;
+	}
+	.game-element{
+		height: 60%;
+		width:90%;
+	}
+
+}
+
+.external{
+	height:20%;
+	width:5%;
+}
+
+.header-logo{ 
+	margin: 1%;
+	text-align: center;
+	text-decoration: none;
+}
+
+.header-name{ 
+	margin: 1%;
+	text-align: left;
+	text-decoration: none;
+}
+
+.header-metadata{
+
+	margin: 1%;
+	text-align: center;
+	font-size: 50%;
+}
+
+main{
+    display: flex;
+    width:100%;
+	z-index: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-family: 'Zen Dots', cursive;
+	color: #C3073F;
+	background-color: #1a1a1d;
+	height: 610px;
+	/* Change height to responsive screen size */
+}
+
+.flip-card{
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+  
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+  }
+  
+.flip-card-front {
+	background-color:#C3073F;
+	color: yellowgreen;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	font-size: 65px;
+	
+  }
+  
+.flip-card-back {
+	background-color:#C3073F;
+	color: yellowgreen;
+	transform: rotateY(180deg);
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+  }
 
 .game{
-	width: 1000px;
-	height: 500px;
-	top: 20px;
-	border: 2px solid yellowgreen;
-	margin: 20px auto 48px;
+	display: flex;
+	flex-flow: row wrap;
+	width:100%;
 	position: relative;
-	background-color: #181818;
-	filter: blur(8px);
+	background-color: #1a1a1d;
+	height: 610px;
 }
 
-.r{
-	display: inline;
-	/* left: 10px; */
-	/* top: 50px; */
-	/* position: absolute; */
-	height: 250px;
-	width:200px;
-	cursor: pointer
+.user{
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	width: 50%;
+	background-color: #1a1a1d;
+	height: 610px;
 }
 
-.p{
-	display: inline;
-	/* left: 350px; */
-	/* top: 40px; */
-	/* position: absolute; */
+.computer{
+	width:50%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	background-color: #1a1a1d;
+	height: 610px;
+}
+
+.game-elements{
+	width: 35%;
+	height: 40%;
+}
+
+.computer-pointer{
+	cursor:default;
+}
+
+h2{
+	width: 100%;
+	text-align: center;
+}
+
+/* .p{ 
+	display: inline-block;
+	position: relative;
 	height: 250px;
 	width:180px;	
 	cursor: pointer;
@@ -133,55 +208,12 @@ table{
 
 
 .s{
-	display: inline;
-	/* left: 700px; */
-	/* top: 30px; */
-	/* position: absolute; */
+	display: inline-block;
+	position: relative;
 	height: 300px;
 	width:180px;
 	cursor: pointer;
-}
-
-.container {
-	display: block; 
-  	position: relative;
-	/* top: -50px;  */
- 	width:53%;
-}
-
-button{
-    background-color:yellowgreen;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 5mm;
-    height:80px;
-    width: 40%;
-    text-align: center;
-    cursor: pointer;
-    color:black;
-}
-
-
-a{
-	color: yellowgreen;
-	text-decoration: none;
-}
-
-a:hover{
-	text-decoration: underline;
-}
-
-button:hover{
-    background-color: #f8f8f8;
-    font-size: 5mm;
-    box-shadow: 1px 1px 1px green;
-    border: 2px solid green;
-    border-radius: 8px;
-    height:80px;
-    text-align: center;
-    cursor: pointer;
-}
-
+} */
 
 .showHeading{
 	
@@ -190,12 +222,12 @@ button:hover{
 
 .abc{
 	position: relative;
-	/* top: 120px; */
-	/* left: 360px; */
-	/* width: 300px; */
+	top: 120px;
+	left: 360px;
+	width: 300px;
 }
 
-/* footer{
+footer{
     width: 100%; 
     font-size: 14px;
     bottom: 0px;
@@ -205,5 +237,38 @@ button:hover{
     border-top: 1px solid #050505; 
     opacity: 60%;
 }
- */
 
+.btn{
+	position: relative;
+	display: block;
+	color: yellowgreen;
+	font-size: 0.6em;
+	text-decoration: none;
+	margin: 30px 0;
+	border: 2px solid #C3073F;
+	padding: 14px 60px;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 1s all ease;
+  }
+
+  .btn::before{
+	background: #C3073F;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: -1;
+	transition: all 0.6s ease;
+  }
+
+.btn1::before{
+	width: 100%;
+	height: 0%;
+	transform: translate(-50%,-50%) rotate(-45deg);
+  }
+
+.btn1:hover::before{
+	height: 800%;
+  }
