@@ -52,6 +52,15 @@ header {
 	header{
 		font-size: 30px;
 	}
+	.flip-card-back{
+		font-size: 25px;
+		line-height: 50px;
+	}
+	.game-element{
+		height: 60%;
+		width:90%;
+		cursor: pointer
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -168,13 +177,24 @@ main{
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
-	width: 50%;
+	width: 33.33%;
+	background-color: #1a1a1d;
+	height: 610px;
+}
+
+.scores{
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;
+	/* align-items: center; */
+	justify-content: center;
+	width: 33.33%;
 	background-color: #1a1a1d;
 	height: 610px;
 }
 
 .computer{
-	width:50%;
+	width:33.33%;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;

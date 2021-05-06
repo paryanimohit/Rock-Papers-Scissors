@@ -41,29 +41,30 @@
 	<div class = 'game'>
 		<div class="user">
 		<h2>USER</h2>		
-		<div class = "game-elements rock"> 
+		<div class = "game-elements"> 
 			<!-- class name was rock earlier -->
-			<img id="rock"src="Images/rock.png" alt="Rock"class="game-element" onClick="hide('Paper','Scissor','rock'); this.onclick=null;" style="visibility: visible;">
+			<img id="rock"src="Images/rock.png" alt="Rock"class="game-element" onClick="startPlay('Paper','Scissor','rock'); this.onclick=null;" style="visibility: visible;">
 		</div>
-		<div class="game-elements paper">
+		<div class="game-elements">
 			<!-- class name was paper -->
-			<img id="paper"src="Images/paper.png" alt="paper"class="game-element" OnClick="hide('Rock','Scissor','paper'); changedClass(); this.onclick=null;" style="visibility: visible;">
+			<img id="paper"src="Images/paper.png" alt="paper"class="game-element" onClick="startPlay('Rock','Scissor','paper'); this.onclick=null;" style="visibility: visible;">
 		</div>
-		<div class="game-elements scissor">
+		<div class="game-elements">
 			<!-- class name was scissor -->
-			<img id="scissor"src="Images/scissor.png" alt="scissor"class="game-element" onClick="hide('Rock','Paper','Scissor'); changedClass(); this.onclick=null;"style="visibility: visible;">
+			<img id="scissor"src="Images/scissor.png" alt="scissor"class="game-element" onClick="startPlay('Rock','Paper','Scissor');  this.onclick=null;"style="visibility: visible;">
 		<!-- <p>TODO: Decide clor combination, optimize css, html, and javascript, change rock paper scissor photo, add rpc animation to be interactive, correct button, store the score until the page reloads,use ajax to update content of score in rpc.</p> -->
 		</div>
-		<!-- <img id="rockC"src="Images/rock.png"alt="Rock"class="s" style="visibility: hidden;">
-		<img id="paperC"src="Images/paper.png"alt="paper"class="s" style="visibility: hidden;">
-	    <img id="scissorC"src="Images/scissor.png"alt="scissor"class="s"style="visibility: hidden;"> -->
-
 		<!-- <h4 style="visibility: hidden;" class="abc" id= "scores"></h4>
 		<h3 style="visibility: hidden;" class="abc"id="result"></h2>	
 		<a href="index.html"><h3 style="visibility: hidden;" class="abc">Retry?</h3></a>	 -->
 	<!-- <div class="button">
 		<button id="btn" class="btn"<button id="btn" class="btn" onClick="showHeading(); unBlur();" style="visibility: visible;">Start a New Game</button>
 	</div> -->
+	</div>
+	<div class = "scores">
+		<h2>SCORES</h2>
+		<div class="user-result"></div>
+		<div class="computer-result"></div>
 	</div>
 	<div class="computer">
 		<h2>COMPUTER</h2>

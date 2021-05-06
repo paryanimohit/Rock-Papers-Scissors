@@ -1,5 +1,17 @@
-var computerScore = 0;
-var playerScore = 0; 
+// var computerScore = 0;
+// var playerScore = 0;
+
+var scores ={
+	userScore = 0,
+	computerScore = 0
+}
+
+var scores = document.getElementsByClassName("scores");
+var userResult = document.getElementsByClassName("user-result");
+var computerResult = document.getElementsByClassName("computer-result");
+var rock = document.getElementById("#rock");
+var paper = document.getElementById("#paper");
+var scissor = document.getElementById("#scissor");
 
 function computerPlay(){
 
@@ -19,81 +31,71 @@ function computerPlay(){
  }
 
 function playRound(player){
-     var computer = computerPlay();
 
+     var computer = computerPlay();
      var playerSelection = player.toUpperCase();
      var computerSelection = computer.toUpperCase();
      
 	 if(playerSelection === computerSelection){
-		var x = document.getElementById("scores");
-		var y = document.getElementById("result");
-		x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
-		y.innerHTML="It's a Draw! Looks like no one wants to win the Game..."
+		
+		userResult.textContent= score.userScore;
+		computerResult.textContent = score.computerScore;
+		scores.textContent="It's a Draw! Looks like no one wants to win the Game..."
       }
+
      else if((playerSelection === "ROCK" && computerSelection === "SCISSOR") || (playerSelection === "PAPER" && computerSelection === "ROCK") || (playerSelection === "SCISSOR" && computerSelection === "PAPER")){
-	playerScore+=1;
-           var x = document.getElementById("scores");
-	var y = document.getElementById("result");
-	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
-	y.innerHTML = "Hurrah! You won this round";
+		
+		playerScore+=1;
+        userResult.textContent=playerScore;
+		computerResult.textContent = computerScore;
+		scores.textContent = "Hurrah! You won this round";
 	}
      else if((playerSelection === "SCISSOR" && computerSelection === "ROCK") || (playerSelection === "ROCK" && computerSelection === "PAPER") || (playerSelection === "PAPER" && computerSelection === "SCISSOR")){
+		
 		computerScore+=1;
-		 var x = document.getElementById("scores");
-	         var y = document.getElementById("result");
-	x.innerHTML="Scores:<br>You &nbsp;&nbsp;&nbsp;&nbsp; Computer<br>"+playerScore+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+computerScore;
-	y.innerHTML="Oops! Computer won this round";
+		userResult.textContent=playerScore;
+		computerResult.textContent = computerScore;
+		scores.textContent="Oops! Computer won this round";
 	}
      else{
-	var y = document.getElementById("result");
-	y.innerHTML="Oops that's our bad. Please reload the page";
+		scores.textContent="Oops that's our bad. Please reload the page";
 	}
-
 }
 
-function hide(element1,element2,element3){
-	if(element1 === "Paper"&& element2==="Scissor"){
-	var x = document.querySelector(".p");
-	var y = document.querySelector(".s");
-		if(x.style.visibility == "visible"){
-			x.style.visibility = "hidden";
-		}
-		
-		if(y.style.visibility == "visible"){
-			y.style.visibility = "hidden";
-			
-		}
-	playRound(element3);	
-	showLinks();
-	}
-	else if(element1 === "Rock"&& element2==="Scissor"){
-	var x = document.querySelector(".r");
-	var y = document.querySelector(".s");
-		if(x.style.visibility == "visible"){
-			x.style.visibility = "hidden";	
-			
-		}
-		
-		if(y.style.visibility == "visible"){
-			y.style.visibility = "hidden";
+function startPlay(element1,element2,element3){
+	if(element1 === "Paper" && element2==="Scissor"){
 	
+		if(paper.style.visibility == "visible"){
+			paper.style.visibility = "hidden";
+		}
+		if(scissor.style.visibility == "visible"){
+			scissor.style.visibility = "hidden";
 		}
 	playRound(element3);
-	showLinks();
+	// showLinks();
+	}
+	else if(element1 === "Rock" && element2==="Scissor"){
+		if(rock.style.visibility == "visible"){
+			rock.style.visibility = "hidden";	
+		}
+		
+		if(scissor.style.visibility == "visible"){
+			scissor.style.visibility = "hidden";
+		}
+	playRound(element3);
+	// showLinks();
 		
 	}
-	else if(element1 === "Rock"&& element2==="Paper"){
-	var x = document.querySelector(".r");
-	var y = document.querySelector(".p");
-		if(x.style.visibility == "visible"){
-			x.style.visibility = "hidden";	
+	else if(element1 === "Rock" && element2==="Paper"){
+		if(rock.style.visibility == "visible"){
+			rock.style.visibility = "hidden";	
 		}
 		
-		if(y.style.visibility == "visible"){
-			y.style.visibility = "hidden";		
+		if(paper.style.visibility == "visible"){
+			paper.style.visibility = "hidden";		
 		}
 	playRound(element3);
-	showLinks();
+	// showLinks();
 	}
 }
 
@@ -122,23 +124,20 @@ function showLinks(){
 }
 
 function showRock(){
-	var y = document.getElementById("rockC");
-	if(y.style.visibility == "hidden"){
-		y.style.visibility = "visible";
+	if(rock.style.visibility == "hidden"){
+		rock.style.visibility = "visible";
 	}
 }
 
 function showPaper(){
-	var y = document.getElementById("paperC");
-	if(y.style.visibility == "hidden"){
-		y.style.visibility ="visible";
+	if(paper.style.visibility == "hidden"){
+		paper.style.visibility ="visible";
 	}
 }
 
 function showScissor(){
-	var y = document.getElementById("scissorC");
-	if(y.style.visibility=="hidden"){
-		y.style.visibility = "visible";
+	if(scissor.style.visibility=="hidden"){
+		scissor.style.visibility = "visible";
 	}
 }
 
