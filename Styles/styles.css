@@ -33,7 +33,6 @@ header {
 	background-color: #1a1a1d;
 	width: 100%;
 	height: 610px;  
-	/* Change height to responsive screen size */
 	z-index: 1;
 }
 
@@ -117,7 +116,6 @@ main{
 	color: #C3073F;
 	background-color: #1a1a1d;
 	height: 610px;
-	/* Change height to responsive screen size */
 }
 
 .flip-card{
@@ -182,7 +180,6 @@ main{
 	align-items: center;
 	justify-content: center;
 	width: 33.33%;
-	/* background-color: #1a1a1d; */
 	height: 610px;
 	background-image: linear-gradient(#1a1a1d 14.8%,#f4d36b 8.13%,#f4d36b 43.13%, #9687fa 43.33%, #9687fa 71.3%, #e73d3d 66.66%);
   	background-size: 100% 100%;
@@ -333,28 +330,26 @@ footer{
   }
 
   .modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	display: none; 
+	position: fixed;
+	z-index: 1;
 	left: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0); 
+	background-color: rgba(0,0,0,0.4);
   }
   
-  /* Modal Content/Box */
   .modal-content {
 	background-color: #1a1a1d;
-	margin: 15% auto; /* 15% from the top and centered */
+	margin: 15% auto;
 	padding: 20px;
 	border: 1px solid #888;
-	width: 40%; /* Could be more or less, depending on screen size */
+	width: 40%; 
   }
   
-  /* The Close Button */
   .close {
 	color: yellowgreen;
 	float: right;
@@ -364,7 +359,7 @@ footer{
   
   .close:hover,
   .close:focus {
-	color: black;
+	color: #C3073F;
 	text-decoration: none;
 	cursor: pointer;
   }
