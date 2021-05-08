@@ -72,7 +72,6 @@ function showRock(){
 		computerScissor = document.getElementById("scissorC");
 		computerPaper.style.visibility = "hidden";
 		computerScissor.style.visibility = "hidden";
-		console.log("Rock is visible");
 }
 
 function showPaper(){
@@ -80,7 +79,6 @@ function showPaper(){
 		computerScissor = document.getElementById("scissorC");
 		computerRock.style.visibility = "hidden";
 		computerScissor.style.visibility ="hidden";
-		console.log("Paper is visible");
 	}
 
 function showScissor(){
@@ -88,7 +86,6 @@ function showScissor(){
 		computerPaper = document.getElementById("paperC");
 		computerRock.style.visibility="hidden";
 		computerPaper.style.visibility = "hidden";
-		console.log("Scissor is visible");
 	}
 
 function resetScores()
