@@ -22,7 +22,7 @@
 			</a>
 		</div>
 		<div class="header-metadata">
-			<a href ="showHeading(); unBlur();" id="startGame" class="btn btn1" >Start a New Game</a>
+			<a href ="#game" id="startGame" class="btn btn1" >Start a New Game</a>
 		</div>
 	</header>
 
@@ -38,55 +38,65 @@
 			</div>
 		</div>
 		
-	<div class = 'game'>
+	<div class = 'game' id="game">
 		<div class="user">
-		<h2>USER</h2>		
+			<h2 id = "username">USER
+				<a href="javascript:openModal();">
+				<img src = "Images/edit.png" alt="Edit Username" class="external"></a>
+			</h2>
+		<div id="modal" class="modal">
+			<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>ENTER YOUR NAME</p>
+			<input type="text" placeholder="Enter your Name" id="name">
+			<a href="javaScript:updateName();" class="modalbtn btn3">Edit</a>
+			</div>
+		</div>
+		<div class="game1" id="usergame">
 		<div class = "game-elements"> 
-			<!-- class name was rock earlier -->
-			<img id="rock"src="Images/rock.png" alt="Rock"class="game-element" onClick="startPlay('Paper','Scissor','rock'); this.onclick=null;" style="visibility: visible;">
+			<img id="rock"src="Images/rock.gif" alt="Rock"class="game-element" onClick="startPlay('Rock'); changeImage(); this.onclick=null;" style="visibility: visible;">
 		</div>
 		<div class="game-elements">
-			<!-- class name was paper -->
-			<img id="paper"src="Images/paper.png" alt="paper"class="game-element" onClick="startPlay('Rock','Scissor','paper'); this.onclick=null;" style="visibility: visible;">
+			<img id="paper"src="Images/paper.gif" alt="paper"class="game-element" onClick="startPlay('Paper'); changeImage(); this.onclick=null;" style="visibility: visible;">
 		</div>
 		<div class="game-elements">
-			<!-- class name was scissor -->
-			<img id="scissor"src="Images/scissor.png" alt="scissor"class="game-element" onClick="startPlay('Rock','Paper','Scissor');  this.onclick=null;"style="visibility: visible;">
+			<img id="scissor"src="Images/scissor.gif" alt="scissor"class="game-element" onClick="startPlay('Scissor'); changeImage(); this.onclick=null;"style="visibility: visible;">
 		<!-- <p>TODO: Decide clor combination, optimize css, html, and javascript, change rock paper scissor photo, add rpc animation to be interactive, correct button, store the score until the page reloads,use ajax to update content of score in rpc.</p> -->
 		</div>
-		<!-- <h4 style="visibility: hidden;" class="abc" id= "scores"></h4>
-		<h3 style="visibility: hidden;" class="abc"id="result"></h2>	
-		<a href="index.html"><h3 style="visibility: hidden;" class="abc">Retry?</h3></a>	 -->
-	<!-- <div class="button">
-		<button id="btn" class="btn"<button id="btn" class="btn" onClick="showHeading(); unBlur();" style="visibility: visible;">Start a New Game</button>
-	</div> -->
+		</div>
 	</div>
 	<div class = "scores">
 		<h2>SCORES</h2>
-		<div class="user-result"></div>
-		<div class="computer-result"></div>
+		<div class="result_"><h3 id="userScore">00</h3></div>
+		<div class="result_"><h3 id="computerScore">00</h3></div>
+		<div class="message"><h4 id ="usermsg">Select your choice to Start Playing. Have Fun!!</h4></div>
+		<div class = "score_button">
+			<!-- Hover on these button is not working -->
+			<a href="javascript:resetScores();" class="btn2 btn1">Reset Score</a>	
+		</div>
+		<div class = "score_button">
+			<a href = "javaScript:playAgain();" class="btn2 btn1">Play Again</a>
+		</div>
 	</div>
 	<div class="computer">
 		<h2>COMPUTER</h2>
+		<div class = "game1"  id="computergame">
 		<div class="game-elements">
-		<img id="rockC"src="Images/rock.png"alt="Rock"class="game-element computer-pointer">
+		<img id="rockC"src="Images/rock.gif"alt="Rock"class="game-element computer-pointer">
 		</div>
 		<div class="game-elements">
-		<img id="paperC"src="Images/paper.png"alt="paper"class="game-element computer-pointer">
+		<img id="paperC"src="Images/paper.gif"alt="paper"class="game-element computer-pointer">
 		</div>
 		<div class="game-elements">
-		<img id="scissorC"src="Images/scissor.png"alt="scissor"class="game-element computer-pointer">
+		<img id="scissorC"src="Images/scissor.gif"alt="scissor"class="game-element computer-pointer">
+		</div>
 		</div>
 	</div>
 </div>
 </main>
 <footer>
 </footer>
-	<!-- <div class="container"><center>
-	<h2 class="showHeading" style="visibility: hidden;">Select Rock, Paper or Scissor</h3>
-    	<button id="btn" class="btn" onClick="showHeading(); unBlur();" style="visibility: visible;">Start a New Game</button>
-	</center></div>
-	</div> -->
     <script src="Scripts/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

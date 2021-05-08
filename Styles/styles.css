@@ -7,6 +7,10 @@ body{
     font-size: 20px;
 }
 
+html {
+	scroll-behavior: smooth;
+  }
+
 .logo{
 	width: 60%;
 	height: 100%;
@@ -42,9 +46,9 @@ header {
 		line-height: 80px;
 	}	
 	.game-element{
+		width:90%;
 		height: 100%;
-		width:100%;
-		cursor: pointer
+		cursor: pointer;
 	}
 }
 
@@ -57,8 +61,8 @@ header {
 		line-height: 50px;
 	}
 	.game-element{
-		height: 60%;
-		width:90%;
+		height: auto;
+		max-width:90%;
 		cursor: pointer
 	}
 }
@@ -73,8 +77,8 @@ header {
 		line-height: 50px;
 	}
 	.game-element{
-		height: 60%;
-		width:90%;
+		height: auto;
+		max-width:90%;
 	}
 
 }
@@ -178,19 +182,31 @@ main{
 	align-items: center;
 	justify-content: center;
 	width: 33.33%;
-	background-color: #1a1a1d;
+	/* background-color: #1a1a1d; */
 	height: 610px;
+	background-image: linear-gradient(#1a1a1d 14.8%,#f4d36b 8.13%,#f4d36b 43.13%, #9687fa 43.33%, #9687fa 71.3%, #e73d3d 66.66%);
+  	background-size: 100% 100%;
+  	background-repeat: no-repeat;
+  	margin: 0px;
 }
 
 .scores{
 	position: relative;
 	display: flex;
+	color: #1a1a1d;
 	flex-flow: row wrap;
-	/* align-items: center; */
+	align-items: center;
 	justify-content: center;
 	width: 33.33%;
-	background-color: #1a1a1d;
+	background-color: #C3073F;
 	height: 610px;
+	text-align: center;
+}
+
+.score_button{
+	margin: 0.5%;
+	text-align: center;
+	font-size: 100%;
 }
 
 .computer{
@@ -200,13 +216,28 @@ main{
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	background-color: #1a1a1d;
+	background-image: linear-gradient(#1a1a1d 14.8%,#f4d36b 8.13%,#f4d36b 43.03%, #9687fa 43.33%, #9687fa 71.3%, #e73d3d 66.66%);
+  	background-size: 100% 100%;
+  	background-repeat: no-repeat;
+  	margin: 0px;
 	height: 610px;
 }
 
+.result_{
+	width: 40%;
+	text-align: center;
+	height: 30%;
+}
+
+.message{
+	width: 70%;
+	text-align: center;
+	height: 20%;
+}
+
 .game-elements{
-	width: 35%;
-	height: 40%;
+	width: 58%;
+	height: 28%;
 }
 
 .computer-pointer{
@@ -217,23 +248,6 @@ h2{
 	width: 100%;
 	text-align: center;
 }
-
-/* .p{ 
-	display: inline-block;
-	position: relative;
-	height: 250px;
-	width:180px;	
-	cursor: pointer;
-}
-
-
-.s{
-	display: inline-block;
-	position: relative;
-	height: 300px;
-	width:180px;
-	cursor: pointer;
-} */
 
 .showHeading{
 	
@@ -292,3 +306,101 @@ footer{
 .btn1:hover::before{
 	height: 800%;
   }
+
+.btn2{
+	position: relative;
+	display: block;
+	color: yellowgreen;
+	font-size: 0.6em;
+	text-decoration: none;
+	margin: 30px 0;
+	border: 2px solid #1a1a1d;
+	padding: 14px 60px;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 1s all ease;
+  }
+
+  .btn2::before{
+	background: #1a1a1d;
+	content: "";
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: -1;
+	transition: all 0.6s ease;
+  }
+
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: #1a1a1d;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+	color: yellowgreen;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .modalbtn{
+	position: fixed;
+	display: block;
+	color: yellowgreen;
+	font-size: 0.6em;
+	text-decoration: none;
+	margin: 30px 0;
+	border: 2px solid #C3073F;
+	padding: 14px 60px;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 1s all ease;
+  }
+
+  .modalbtn::before{
+	background: #C3073F;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: -1;
+	transition: all 0.6s ease;
+  }
+
+.btn3::before{
+	width: 100%;
+	height: 0%;
+	transform: translate(-50%,-50%) rotate(-45deg);
+  }
+
+.btn3:hover::before{
+	height: 350%;
+  }
+
