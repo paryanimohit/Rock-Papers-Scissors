@@ -11,15 +11,9 @@ html {
 	scroll-behavior: smooth;
   }
 
-.logo{
-	width: 60%;
-	height: 100%;
-	border-radius:50%;
-}
-
 h1{
 	width: 100%;
-	font-size: 80% !important;
+	font-size: 90% !important;
 }
 
 header {
@@ -29,10 +23,14 @@ header {
 	align-items: center;
 	justify-content: center;
 	font-family: 'Zen Dots', cursive;
-	color: #C3073F;
-	background-color: #1a1a1d;
-	width: 100%;
-	height: 610px;  
+	color: #C3073F ;
+	background: url("/Images/logo-2.gif") no-repeat fixed center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	width: 100%;  
+	height: 100vh;
 	z-index: 1;
 }
 
@@ -44,11 +42,40 @@ header {
 		font-size: 35px;
 		line-height: 80px;
 	}	
+	.game-elements{
+		margin:20px;
+		}	
 	.game-element{
-		width:90%;
-		height: 100%;
+		width:180px;
+		height: 145px;
 		cursor: pointer;
+		border-radius: 50%;
 	}
+	.user{
+		width: 33.33%;
+		height: 100vh;
+	}
+	.scores{
+		width: 33.33%;
+		height: 100vh;
+	}
+	.game1{
+		display: flex;
+		flex-flow: row wrap;
+		height:85vh;
+	}
+	.computer{
+		width: 33.33%;
+		height: 100vh;
+	}
+	.message{
+		height: 20%;
+	}
+	.btn2{
+		font-size: 0.6em;
+		margin: 30px 0;
+		padding: 14px 60px;
+		}	
 }
 
 @media only screen and (min-width: 600px) and (max-width: 700px) {
@@ -60,10 +87,34 @@ header {
 		line-height: 50px;
 	}
 	.game-element{
-		height: auto;
-		max-width:90%;
-		cursor: pointer
+		height: 163px;
+		width:230px;
+		cursor: pointer;
+		border-radius: 50%;
 	}
+	.user{
+		width: 33.33%;
+		height: 100vh;
+	}
+	.scores{
+		width: 33.33%;
+		height: 100vh;
+	}
+	.computer{
+		width: 33.33%;
+		height: 100vh;
+	}
+	.game1{
+		display: flex;
+		flex-flow: row wrap;
+		height:85vh;
+	}
+	.message{
+		height: 20%;
+	}
+	.game-elements{
+		margin:20px;
+		}	
 }
 
 @media only screen and (max-width: 600px) {
@@ -76,32 +127,65 @@ header {
 		line-height: 50px;
 	}
 	.game-element{
-		height: auto;
-		max-width:90%;
+		height: 100px;
+		width:120px;
+		border-radius: 50%;
 	}
-
+	.game1{
+		display: flex;
+		flex-flow: row wrap;
+		height:30vh;
+	}
+	.user{
+		width: 100%;
+		height: 30vh;
+	}
+	.scores{
+		width: 100%;
+		height: 28vh;
+	}
+	.game-elements{
+		margin:2px;
+		}	
+	.computer{
+		width: 100%;
+		height: 30vh;
+	}
+	h2{
+		font-size: 18px;
+		height: 5%;
+	}
+	.result_{
+		font-size: 14px;
+		height: 5%;
+	}
+	.message{
+		height: 5%;
+		font-size: 12px;
+	}
+	.btn2{
+		font-size: 12px;
+		padding: 8px 20px;
+		}	
 }
 
 .external{
-	height:20%;
-	width:5%;
-}
-
-.header-logo{ 
-	margin: 1%;
-	text-align: center;
-	text-decoration: none;
+	height:20px;
+	width:20px;
 }
 
 .header-name{ 
 	margin: 1%;
-	text-align: left;
-	text-decoration: none;
+	line-height: 80px;
+	height: 40vh;
+	text-align: center;
+	width: 100%;
 }
 
 .header-metadata{
 
 	margin: 1%;
+	height: 20vh;
 	text-align: center;
 	font-size: 50%;
 }
@@ -115,7 +199,7 @@ main{
 	font-family: 'Zen Dots', cursive;
 	color: #C3073F;
 	background-color: #1a1a1d;
-	height: 610px;
+	height: 100vh;
 }
 
 .flip-card{
@@ -146,8 +230,12 @@ main{
   }
   
 .flip-card-front {
-	background-color:#C3073F;
-	color: yellowgreen;
+	background: url("/Images/logo-2.gif") no-repeat fixed center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	color: #C3073F;
 	display: flex;
   	align-items: center;
   	justify-content: center;
@@ -156,8 +244,8 @@ main{
   }
   
 .flip-card-back {
-	background-color:#C3073F;
-	color: yellowgreen;
+	background: transparent;
+	color: #c3073f;
 	transform: rotateY(180deg);
 	display: flex;
 	align-items: center;
@@ -169,8 +257,21 @@ main{
 	flex-flow: row wrap;
 	width:100%;
 	position: relative;
-	background-color: #1a1a1d;
-	height: 610px;
+	background: url("/Images/logo-2.gif") no-repeat fixed center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	height: 100vh;
+}
+
+.computer{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin: 0px;
 }
 
 .user{
@@ -179,24 +280,17 @@ main{
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
-	width: 33.33%;
-	height: 610px;
-	background-image: linear-gradient(#1a1a1d 14.8%,#f4d36b 8.13%,#f4d36b 43.13%, #9687fa 43.33%, #9687fa 71.3%, #e73d3d 66.66%);
-  	background-size: 100% 100%;
-  	background-repeat: no-repeat;
-  	margin: 0px;
+	margin: 0px;
 }
 
 .scores{
 	position: relative;
 	display: flex;
-	color: #1a1a1d;
+	color: #c3073f;
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
-	width: 33.33%;
-	background-color: #C3073F;
-	height: 610px;
+	background: #1a1a1d;
 	text-align: center;
 }
 
@@ -206,35 +300,14 @@ main{
 	font-size: 100%;
 }
 
-.computer{
-	width:33.33%;
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	background-image: linear-gradient(#1a1a1d 14.8%,#f4d36b 8.13%,#f4d36b 43.03%, #9687fa 43.33%, #9687fa 71.3%, #e73d3d 66.66%);
-  	background-size: 100% 100%;
-  	background-repeat: no-repeat;
-  	margin: 0px;
-	height: 610px;
-}
-
 .result_{
 	width: 40%;
 	text-align: center;
-	height: 30%;
 }
 
 .message{
 	width: 70%;
 	text-align: center;
-	height: 20%;
-}
-
-.game-elements{
-	width: 58%;
-	height: 28%;
 }
 
 .computer-pointer{
@@ -246,19 +319,14 @@ h2{
 	text-align: center;
 }
 
-.showHeading{
-	
-	color: yellowgreen;
+.game1{
+	width: 100%;
+	justify-content: center;
+	margin: 0 auto;
+	align-content: center;
 }
 
-.abc{
-	position: relative;
-	top: 120px;
-	left: 360px;
-	width: 300px;
-}
-
-footer{
+/* footer{
     width: 100%; 
     font-size: 14px;
     bottom: 0px;
@@ -267,7 +335,7 @@ footer{
     line-height: 40px;
     border-top: 1px solid #050505; 
     opacity: 60%;
-}
+} */
 
 .btn{
 	position: relative;
@@ -306,20 +374,16 @@ footer{
 
 .btn2{
 	position: relative;
-	display: block;
 	color: yellowgreen;
-	font-size: 0.6em;
 	text-decoration: none;
-	margin: 30px 0;
-	border: 2px solid #1a1a1d;
-	padding: 14px 60px;
+	border: 2px solid #C3073F;
 	text-transform: uppercase;
 	overflow: hidden;
 	transition: 1s all ease;
   }
 
   .btn2::before{
-	background: #1a1a1d;
+	background: #C3073F;
 	content: "";
 	position: relative;
 	top: 50%;
