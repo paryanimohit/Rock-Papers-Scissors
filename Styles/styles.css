@@ -24,7 +24,7 @@ header {
 	justify-content: center;
 	font-family: 'Zen Dots', cursive;
 	color: #C3073F ;
-	background: url("/Images/logo-2.gif") no-repeat fixed center;
+	background: url("https://github.com/paryanimohit/Rock-Papers-Scissors/tree/master/Images/logo-2.gif") no-repeat fixed center;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -230,7 +230,7 @@ main{
   }
   
 .flip-card-front {
-	background: url("/Images/logo-2.gif") no-repeat fixed center;
+	background: url("https://github.com/paryanimohit/Rock-Papers-Scissors/tree/master/Images/logo-2.gif") no-repeat fixed center;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -257,7 +257,7 @@ main{
 	flex-flow: row wrap;
 	width:100%;
 	position: relative;
-	background: url("/Images/logo-2.gif") no-repeat fixed center;
+	background: url("https://github.com/paryanimohit/Rock-Papers-Scissors/tree/master/Images/logo-2.gif") no-repeat fixed center;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
