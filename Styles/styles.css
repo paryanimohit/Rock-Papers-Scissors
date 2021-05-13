@@ -31,7 +31,7 @@ header {
   	background-size: cover;
 	width: 100%;  
 	height: 100vh;
-	z-index: 1;
+	z-index: 100;
 }
 
 @media only screen and (min-width: 700px) {
@@ -75,46 +75,21 @@ header {
 		font-size: 0.6em;
 		margin: 30px 0;
 		padding: 14px 60px;
-		}	
-}
-
-@media only screen and (min-width: 600px) and (max-width: 700px) {
-	header{
-		font-size: 30px;
+	}	
+	.tab{
+		width: 40%;
+		margin: 20px;
+		justify-content: left;
 	}
-	.flip-card-back{
-		font-size: 25px;
-		line-height: 50px;
+	.profile_pic{
+		width: 300px;
+		border-radius: 30%;
+		height: 400px;
 	}
-	.game-element{
-		height: 163px;
-		width:230px;
-		cursor: pointer;
-		border-radius: 50%;
+	.external_footer{
+		width: 90px;
+		height: 80px;
 	}
-	.user{
-		width: 33.33%;
-		height: 100vh;
-	}
-	.scores{
-		width: 33.33%;
-		height: 100vh;
-	}
-	.computer{
-		width: 33.33%;
-		height: 100vh;
-	}
-	.game1{
-		display: flex;
-		flex-flow: row wrap;
-		height:85vh;
-	}
-	.message{
-		height: 20%;
-	}
-	.game-elements{
-		margin:20px;
-		}	
 }
 
 @media only screen and (max-width: 600px) {
@@ -200,6 +175,7 @@ main{
 	color: #C3073F;
 	background-color: #1a1a1d;
 	height: 100vh;
+	z-index: 100;
 }
 
 .flip-card{
@@ -326,16 +302,25 @@ h2{
 	align-content: center;
 }
 
-/* footer{
-    width: 100%; 
-    font-size: 14px;
-    bottom: 0px;
-    background-color: #130f0f;
-    position: fixed;
-    line-height: 40px;
-    border-top: 1px solid #050505; 
-    opacity: 60%;
-} */
+footer{
+	display: flex;
+	bottom:0;
+    width:100%;
+	justify-content: center;
+	z-index: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-family: 'Zen Dots', cursive;
+	color: #C3073F;
+	background-color: #1a1a1d;
+	height: 80vh;
+}
+
+.content{
+	width: 80%;
+	display: flex;
+	flex-flow: row wrap;
+}
 
 .btn{
 	position: relative;

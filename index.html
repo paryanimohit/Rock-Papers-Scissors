@@ -8,7 +8,7 @@
     <link href="Styles/styles.css" rel="stylesheet">  
 </head>
 <body>
-	<header>
+<header>
 		<div class = "header-name">
 				<h1>Rock<br>Paper<br>Scissors</h1>
 		</div>
@@ -20,77 +20,90 @@
 		<div class="header-metadata">
 			<a href ="#game" id="startGame" class="btn btn1" >Start a New Game</a>
 		</div>
-	</header>
+</header>
 
-	<main>
-		<div class="flip-card">
-			<div class="flip-card-inner">
-			  <div class="flip-card-front">
-				  <h1>How To Play?</h1>
-			  </div>
-			  <div class="flip-card-back">
-				<p>Rock paper scissors is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). Rock Beats Scissors, Paper Beats Rock & Scissor Beats Paper</p>
-			 </div>
+<main>
+	<div class="flip-card">
+		<div class="flip-card-inner">
+			<div class="flip-card-front">
+				<h1>How To Play?</h1>
+			</div>
+			<div class="flip-card-back">
+			<p>Rock paper scissors is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a flat hand), and "scissors" (a fist with the index finger and middle finger extended, forming a V). Rock Beats Scissors, Paper Beats Rock & Scissor Beats Paper</p>
 			</div>
 		</div>
-		
+	</div>
+	
 	<div class = 'game' id="game">
 		<div class="user">
 			<h2 id = "username">USER
 				<a href="javascript:openModal();">
 				<img src = "Images/edit.png" alt="Edit Username" class="external"></a>
 			</h2>
-		<div id="modal" class="modal">
-			<div class="modal-content">
-			<span class="close">&times;</span>
-			<p>ENTER YOUR NAME</p>
-			<input type="text" placeholder="Enter your Name" id="name">
-			<a href="javaScript:updateName();" class="modalbtn btn3">Edit</a>
+			<div id="modal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p>ENTER YOUR NAME</p>
+					<input type="text" placeholder="Enter your Name" id="name">
+					<a href="javaScript:updateName();" class="modalbtn btn3">Edit</a>
+				</div>
+			</div>
+			<div class="game1" id="usergame">
+				<div class = "game-elements"> 
+					<img id="rock"src="Images/rock.gif" alt="Rock"class="game-element" onClick="startPlay('Rock'); this.onclick=null;" style="visibility: visible;">
+				</div>
+				<div class="game-elements">
+					<img id="paper"src="Images/paper.gif" alt="paper"class="game-element" onClick="startPlay('Paper'); this.onclick=null;" style="visibility: visible;">
+				</div>
+				<div class="game-elements">
+					<img id="scissor"src="Images/scissor.gif" alt="scissor"class="game-element" onClick="startPlay('Scissor'); this.onclick=null;"style="visibility: visible;">
+				</div>
 			</div>
 		</div>
-		<div class="game1" id="usergame">
-		<div class = "game-elements"> 
-			<img id="rock"src="Images/rock.gif" alt="Rock"class="game-element" onClick="startPlay('Rock'); this.onclick=null;" style="visibility: visible;">
+		<div class = "scores">
+			<h2>SCORES</h2>
+			<div class="result_"><h3 id="userScore">00</h3></div>
+			<div class="result_"><h3 id="computerScore">00</h3></div>
+			<div class="message"><h4 id ="usermsg">Select your choice to Start Playing. Have Fun!!</h4></div>
+			<div class = "score_button">
+				<a href="javascript:resetScores();" class="btn2 btn1">Reset Score</a>	
+			</div>
+			<div class = "score_button">
+				<a href = "javaScript:playAgain();" class="btn2 btn1">Play Again</a>
+			</div>
 		</div>
-		<div class="game-elements">
-			<img id="paper"src="Images/paper.gif" alt="paper"class="game-element" onClick="startPlay('Paper'); this.onclick=null;" style="visibility: visible;">
-		</div>
-		<div class="game-elements">
-			<img id="scissor"src="Images/scissor.gif" alt="scissor"class="game-element" onClick="startPlay('Scissor'); this.onclick=null;"style="visibility: visible;">
-		</div>
-		</div>
+		<div class="computer">
+			<h2>COMPUTER</h2>
+			<div class = "game1"  id="computergame">
+				<div class="game-elements">
+					<img id="rockC"src="Images/rock.gif"alt="Rock"class="game-element computer-pointer">
+				</div>
+				<div class="game-elements">
+					<img id="paperC"src="Images/paper.gif"alt="paper"class="game-element computer-pointer">
+				</div>
+				<div class="game-elements">
+					<img id="scissorC"src="Images/scissor.gif"alt="scissor"class="game-element computer-pointer">
+				</div>
+			</div>
+		</div> 
 	</div>
-	<div class = "scores">
-		<h2>SCORES</h2>
-		<div class="result_"><h3 id="userScore">00</h3></div>
-		<div class="result_"><h3 id="computerScore">00</h3></div>
-		<div class="message"><h4 id ="usermsg">Select your choice to Start Playing. Have Fun!!</h4></div>
-		<div class = "score_button">
-			<a href="javascript:resetScores();" class="btn2 btn1">Reset Score</a>	
-		</div>
-		<div class = "score_button">
-			<a href = "javaScript:playAgain();" class="btn2 btn1">Play Again</a>
-		</div>
-	</div>
-	<div class="computer">
-		<h2>COMPUTER</h2>
-		<div class = "game1"  id="computergame">
-		<div class="game-elements">
-		<img id="rockC"src="Images/rock.gif"alt="Rock"class="game-element computer-pointer">
-		</div>
-		<div class="game-elements">
-		<img id="paperC"src="Images/paper.gif"alt="paper"class="game-element computer-pointer">
-		</div>
-		<div class="game-elements">
-		<img id="scissorC"src="Images/scissor.gif"alt="scissor"class="game-element computer-pointer">
+	<footer>
+		<h2 align="center">I AM</h1>
+		<div class = "content">
+			<div class="tab"><img src="Images/mohit.jpg" class="profile_pic"></div>
+			<div class="tab"><h3>MOHIT PARYANI</h3>
+			<p>A Software Engineering Graduate Student at the University of Maryland, Graduating in May 2021</p>
+			<p>Check out the project on my Github</p>
+			<p>If you like my work, do follow me on the LinkedIn</p>
+			<a href = "https://www.linkedin.com/in/mohitparyani/" target="_blank">
+				<img src ="Images/linkedin.png" class="external_footer"></a>
+			<a href="https://github.com/paryanimohit/Rock-Papers-Scissors" target="_blank">
+				<img src="Images/Octocat.png" class="external_footer"></a>
 		</div>
 		</div>
-	</div> 
-</div>
+	</footer>
 </main>
-<footer>
-</footer>
-    <script src="Scripts/main.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="Scripts/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
