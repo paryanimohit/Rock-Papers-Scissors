@@ -1,2 +1,2 @@
 # rock-paper-scissors
-A Classic rock paper scissors game developed in JS.
+A Classic rock paper scissors game developed with HTML, CSS, and JavaScript.
